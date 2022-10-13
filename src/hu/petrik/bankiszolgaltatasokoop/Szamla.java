@@ -8,11 +8,6 @@ public abstract class Szamla extends BankiSzolgaltatas{
         super(tulajdonos);
     }
 
-    public Szamla(Tulajdonos tulajdonos, int aktualisEgyenleg) {
-        super(tulajdonos);
-        this.aktualisEgyenleg = aktualisEgyenleg;
-    }
-
     public int getAktualisEgyenleg() {
         return aktualisEgyenleg;
     }
