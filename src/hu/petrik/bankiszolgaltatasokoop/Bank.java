@@ -12,8 +12,10 @@ public class Bank {
 
     public Szamla szamlanyitas(Tulajdonos tulajdonos, int hitelKeret){
         if (hitelKeret >0){
+            szamlaLista.add(new HitelSzamla(tulajdonos, hitelKeret));
             return new HitelSzamla(tulajdonos, hitelKeret);
         } else if(hitelKeret == 0){
+            szamlaLista.add(new MegtakaritasiSzamla(tulajdonos));
             return new MegtakaritasiSzamla(tulajdonos);
         }else{
             throw new IllegalArgumentException("A hitelkeret nem lehet kisebb mint 0");

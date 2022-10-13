@@ -9,13 +9,13 @@ public class HitelSzamla extends Szamla{
     }
 
     public int getHitelKeret() {
-        return hitelKeret;
+        return this.hitelKeret;
     }
 
     @Override
     public boolean kivesz(int osszeg) {
         if(osszeg <= this.hitelKeret + this.aktualisEgyenleg){
-            this.aktualisEgyenleg -= osszeg;
+            this.hitelKeret -= osszeg;
             return true;
         }else {
             return false;
