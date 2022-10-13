@@ -2,7 +2,7 @@ package hu.petrik.bankiszolgaltatasokoop;
 
 public class MegtakaritasiSzamla extends Szamla {
     private double kamat;
-    public static double alapKamat;
+    public static double alapKamat = 1.1;
 
     public void setKamat(double kamat) {
         this.kamat = kamat;
@@ -14,6 +14,7 @@ public class MegtakaritasiSzamla extends Szamla {
 
     public MegtakaritasiSzamla(Tulajdonos tulajdonos) {
         super(tulajdonos);
+        kamat = alapKamat;
     }
 
     @Override
